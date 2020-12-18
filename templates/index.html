@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>image downloader</title>
+{% endblock %}
+
+{% block body %}
+<h1>give your requirments</h1>
+<hr>
+    <form action='/image_crawler' method='POST'>
+        <label for="number">number</label>
+        <input class="form-control" type="text" name='number' id='number' placeholder="Enter number of images" aria-label="Enter Title">
+        <br>
+        <label for="keyword">search key words</label>
+        <input class="form-control" type="text" name='keyword' id='keyword' placeholder="Enter your keyword" aria-label="Enter Author">
+        <br>
+        <input type='submit' value='Post'>
+    </form>
+    <hr>
+{% endblock %}

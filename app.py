@@ -27,9 +27,13 @@ def crawler_page():
         number_of_images = request.form['number']
         keyword = request.form['keyword']
         imgcrl.download_images(int(number_of_images),keyword)
-        return redirect('/image_crawler')
+        return redirect('/image_crawler/downloads')
     else:
         return render_template('index.html')
+
+@app.route('/image_crawler/downloads')
+def download_page():
+    return render_template('crawler_download.html')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>ed sheeran song lyrics Generator</title>
+{% endblock %}
+
+{% block body %}
+<h1>Please enter the first line of the song</h1>
+<hr>
+    <form action='/NLP_model' method='POST'>
+        <label for="number">number of words</label>
+        <input class="form-control" type="text" name='number' id='number' placeholder="enter number of succeding words" aria-label="enter number">
+        <br>
+        <label for="keyword">initial sentence</label>
+        <input class="form-control" type="text" name='sentence' id='sentence' placeholder="Enter your initial sentence" aria-label="Enter sentence">
+        <br>
+        <input type='submit' value='Request'>
+    </form>
+<hr>
+<h2>Please wait until you get redirected(will take a while if number of images is too high)</h2>
+{% endblock %}

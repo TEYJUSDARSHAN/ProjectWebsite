@@ -35,6 +35,10 @@ def crawler_page():
 def download_page():
     return render_template('crawler_download.html')
 
+@app.route('/NLP_model',methods = ['POST','GET'])
+def songlyrics():
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

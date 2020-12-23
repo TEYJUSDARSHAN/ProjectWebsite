@@ -12,10 +12,6 @@ post_list = [
         'title' : 'my first post',
         'author' : 'teyjus darshan the great',
         'content' : 'hey that was a great post by the great one'
-    },
-    {
-        'title' : 'my second post',
-        'content' : 'hey that was a greatest post'
     }
 ]
 @app.route('/home')

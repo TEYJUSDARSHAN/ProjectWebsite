@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request,redirect
 #from flask_sqlalchemy import SQLAlchemy
 import imagecrawler as imgcrl
-#import NLPlyrics as lyrics
+import NLPlyrics as lyrics
 
 app = Flask(__name__)
 
@@ -41,8 +41,8 @@ def songlyrics():
     if request.method == 'POST':
         number_of_needed_words = request.form['number']
         initial_sent = request.form['sentence']
-        #predicted_text = lyrics.writelyrics(number_of_needed_words,intital_sent)
-        return render_template('/lyricsresult.html',display_text = 'predicted_text')
+        predicted_text = lyrics.writelyrics(int(number_of_needed_words),initial_sent)
+        return render_template('/lyricsresult.html',display_text = predicted_text)
     else:
         return render_template('NLP.html')
 
